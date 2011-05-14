@@ -1,0 +1,35 @@
+Name:                snap-extension-hdbc-sqlite3
+Version:             0.0.1
+Synopsis:            HDBC extension for Snap Framework (Sqlite3)
+Homepage:            https://github.com/zenzike/snap-extension-hdbc
+License:             BSD3
+License-file:        LICENSE
+Author:              Nicolas Wu
+Maintainer:          zenzike@gmail.com
+Category:            Web
+Build-type:          Simple
+
+Cabal-version:       >=1.8
+
+
+Library
+  hs-source-dirs: src
+
+  Exposed-modules:
+      Snap.Extension.HDBC.Sqlite3
+
+  Build-depends:
+      base >= 4 && < 5
+    , snap >= 0.4 && < 0.5
+    , snap-core >= 0.4 && < 0.5
+    , HDBC == 2.2.7.*
+    , HDBC-sqlite3 == 2.3.1.*
+    , snap-extension-hdbc == 0.0.*
+    , transformers == 0.2.2.*
+    , mtl >= 2 && < 3
+
+  extensions:
+      OverloadedStrings
+    , FlexibleInstances
+    , TypeSynonymInstances
+    , MultiParamTypeClasses
